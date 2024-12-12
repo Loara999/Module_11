@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import openpyxl
 
-# #1 - requests
+#1 - requests
 r = requests.get('https://api.github.com')
 r_json = r.json()
 pprint(r_json)
@@ -12,7 +12,7 @@ img = requests.get('https://sun9-61.userapi.com/impg/12i35FDHolTZF1sp71Ho372tQmv
 with open('image.jpg', 'wb') as file:
     file.write(img.content)
 
-# #2 - numpy
+#2 - numpy
 a = np.arange(5, 100, 5)
 b = np.eye(5)
 print(a)
@@ -22,7 +22,7 @@ a = np.random.randint(1, 10, 10)
 print(a)
 print(np.sort(a))
 
-# - pandas
+#3 - pandas
 keys = [chr(65 + n) for n in range(10)]
 values = [np.random.randint(1, 10, 10) for _ in range(10)]
 Matrix = {k: v for k, v in zip(keys,values)}
