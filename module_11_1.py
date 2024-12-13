@@ -25,11 +25,11 @@ print(np.sort(a))
 #3 - pandas
 keys = [chr(65 + n) for n in range(10)]
 values = [np.random.randint(1, 10, 10) for _ in range(10)]
-Matrix = {k: v for k, v in zip(keys,values)}
-Matrix = pd.DataFrame(Matrix, index=keys)
-Matrix.to_excel('file_1.xlsx')
-Matrix_analysis = Matrix.agg(['sum', 'min','max', 'mean'])
-Matrix = pd.read_excel('./file_1.xlsx', index_col=0)
-print(Matrix)
+matrix = {k: v for k, v in zip(keys,values)}
+matrix = pd.DataFrame(matrix, index=keys)
+matrix.to_excel('file_1.xlsx')
+matrix_analysis = matrix.agg(['sum', 'min','max', 'mean'])
+matrix = pd.read_excel('./file_1.xlsx', index_col=0)
+print(matrix)
 print()
-print(Matrix_analysis)
+print(matrix_analysis)
